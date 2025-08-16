@@ -1,4 +1,1 @@
-
-:root { color-scheme: light; }
-html, body { scroll-behavior: smooth; }
-a { transition: all 160ms ease; }
+.animate-fadeIn{animation:fadeIn 1s ease forwards}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
