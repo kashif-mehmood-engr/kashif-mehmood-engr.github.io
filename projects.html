@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kashif Mehmood — Portfolio</title>
+  <meta name="description" content="Portfolio of Kashif Mehmood, Sr DevOps Engineer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/theme.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900 text-white font-sans selection:bg-cyan-400 selection:text-black">
+
+<header class="sticky top-0 z-30 bg-black/30 backdrop-blur border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+    <a class="font-extrabold text-xl tracking-tight" href="index.html">Kashif<span class="text-cyan-400">.</span></a>
+    <nav class="hidden md:flex items-center gap-1"><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="index.html">Home</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="about.html">About</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="skills.html">Skills</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="experience.html">Experience</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition bg-cyan-400 text-black font-semibold" href="projects.html">Projects</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="certifications.html">Certifications</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="education.html">Education</a><a class="px-3 py-2 rounded-xl hover:bg-white/10 transition" href="contact.html">Contact</a></nav>
+    <div class="flex items-center gap-2">
+      <button onclick="toggleTheme()" class="px-3 py-2 border border-white/20 rounded-lg text-sm hover:bg-white/10" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-12">
+  <h1 class="text-4xl font-extrabold text-cyan-300">Projects</h1>
+  <div class="mt-8 grid md:grid-cols-2 gap-6">
+    
+    <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:shadow-lg hover:shadow-cyan-500/10 transition">
+      <h3 class="text-xl font-bold">Donation Platform</h3>
+      <p class="mt-2 opacity-90">Highly scalable donation platform with Docker + GKE, RabbitMQ, MongoDB; autoscaling and strong monitoring/security.</p>
+      <div id="details-1" class="mt-3 hidden opacity-90">Architecture designed for high scalability and availability using Docker for standardized environments and Google Kubernetes Engine (GKE) for orchestration with autoscaling. RabbitMQ ensures reliable messaging and MongoDB provides scalable data storage. Load testing showed ~30,000 requests/second. Monitoring with Prometheus and Grafana; security via OWASP ZAP, SonarQube, and Checkmarx (DAST/SAST).</div>
+      <button class="mt-4 px-4 py-2 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300"
+              data-readmore="#details-1" data-more="Read More" data-less="Show Less">Read More</button>
+    </div>
+    
+    <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:shadow-lg hover:shadow-cyan-500/10 transition">
+      <h3 class="text-xl font-bold">Digital Production Scraping using Java</h3>
+      <p class="mt-2 opacity-90">Large-scale web scraping on AWS with API Gateway, ALB, EC2 ASG, RabbitMQ, MongoDB (replicas); k6-verified performance.</p>
+      <div id="details-2" class="mt-3 hidden opacity-90">Built to handle large data volumes and high traffic: API Gateway for secure access, Load Balancer distributing to EC2 instances with Auto Scaling. RabbitMQ for async communication, MongoDB with read replicas for performance. Load testing with k6 validated ~1,500 requests/second. Monitoring with Prometheus and Grafana. Security: DAST (OWASP ZAP) and SAST (SonarQube, Checkmarx).</div>
+      <button class="mt-4 px-4 py-2 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300"
+              data-readmore="#details-2" data-more="Read More" data-less="Show Less">Read More</button>
+    </div>
+    
+    <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:shadow-lg hover:shadow-cyan-500/10 transition">
+      <h3 class="text-xl font-bold">Application Migration (GCP to AWS)</h3>
+      <p class="mt-2 opacity-90">End-to-end migration of catch.app from GCP to AWS using DMS/SMS; improved performance and reduced costs.</p>
+      <div id="details-3" class="mt-3 hidden opacity-90">Source on GCP included compute, DBs, storage and security configurations. Target AWS architecture used EC2, S3, and RDS with optimized configs for performance and scalability. Phased migration (data, application, infrastructure) using AWS Database Migration Service and AWS Server Migration Service delivered a smooth, cost-efficient transition and better performance.</div>
+      <button class="mt-4 px-4 py-2 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300"
+              data-readmore="#details-3" data-more="Read More" data-less="Show Less">Read More</button>
+    </div>
+    
+    <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:shadow-lg hover:shadow-cyan-500/10 transition">
+      <h3 class="text-xl font-bold">Liveauctions</h3>
+      <p class="mt-2 opacity-90">Real-time app on GCP for massive concurrent connections using LB + Compute Engine; RabbitMQ (Shovel) + WebSTOMP.</p>
+      <div id="details-4" class="mt-3 hidden opacity-90">Highly scalable live application with GCP Load Balancer across elastic compute instances. MySQL as primary DB. RabbitMQ with Shovel for robust messaging and WebSTOMP for efficient real-time communication. Load testing with k6 and LoadView validated up to ~100,000 concurrent connections. Monitoring via Grafana; security validated with DAST (OWASP ZAP) and SAST (SonarQube, Checkmarx).</div>
+      <button class="mt-4 px-4 py-2 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300"
+              data-readmore="#details-4" data-more="Read More" data-less="Show Less">Read More</button>
+    </div>
+    
+  </div>
+</main>
+
+<footer class="mt-20 border-t border-white/10 bg-black/30">
+  <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+    <p class="text-sm opacity-80">© 2025 Kashif Mehmood. All rights reserved.</p>
+    <div class="flex gap-4 text-sm">
+      <a class="hover:underline" href="mailto:kashifmehmood.engr@gmail.com">Email</a>
+      <a class="hover:underline" href="https://www.linkedin.com/in/kmehmood01/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="hover:underline" href="https://github.com/kashif-mehmood-engr" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
