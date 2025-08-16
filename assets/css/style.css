@@ -1,0 +1,4 @@
+
+:root { color-scheme: light; }
+html, body { scroll-behavior: smooth; }
+a { transition: all 160ms ease; }
